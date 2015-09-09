@@ -166,7 +166,7 @@
           <show>protected</show>
           <noqualifier>java.lang</noqualifier>
           <excludePackageNames>org.jasypt.contrib.*</excludePackageNames>
-          <additionalparam>-Xdoclint:none</additionalparam>
+          <additionalparam>${javadoc.opts}</additionalparam>
           <links>
             <link>http://www.jasypt.org/api/jasypt/${project.version}/</link>
           </links>
@@ -285,5 +285,16 @@
     
   </dependencies>
 
+  <profiles>
+  	<profile>
+  		<id>disable-doclint-in-java8</id>
+  		<activation>
+  			<jdk>[1.8,)</jdk>
+  		</activation>
+  		<properties>
+  			<javadoc.opts>-Xdoclint:none</javadoc.opts>
+  		</properties>
+  	</profile>
+  </profiles>
   
 </project>
