@@ -232,7 +232,7 @@
     <dependency>
       <groupId>org.jasypt</groupId>
       <artifactId>jasypt</artifactId>
-      <version>1.9.3</version>
+      <version>1.9.3.redhat_2</version>
       <scope>compile</scope>
     </dependency>
 
